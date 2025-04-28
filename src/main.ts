@@ -5,8 +5,6 @@ document.getElementById('app')!.innerHTML = `
   <div id="contact-info" style="display:none;">
     <p>GitHub: <a href="https://github.com/notyourimaginarycoder">imaginary friend</a></p>
   </div>
-
-  test
 `
 
 const contactButton = document.getElementById('contact-btn')!
