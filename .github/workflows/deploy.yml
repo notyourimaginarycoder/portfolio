@@ -27,6 +27,7 @@ jobs:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
+          external_repository: notyourimaginarycoder/notyourimaginarycoder.github.io
           github_token: ${{ secrets.DEPLOYMENT }}
           publish_dir: ./dist
           publish_branch: gh-pages
