@@ -1,4 +1,4 @@
-name: deploy portfolio to github page
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -10,24 +10,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - name: Checkout source code
+        uses: actions/checkout@v3
 
-      - name: set up
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+      - name: Build the site
+        run: |
+          echo "Building site..."
+          # Example for static HTML site:
+          mkdir dist
+          cp -r * dist || true
+          rm -rf dist/.git dist/.github
 
-      - name: install
-        run: npm install
-
-      - name: build
-        run: npm run build
-
-      - name: deploy
+      - name: Deploy to github.io repo
         uses: peaceiris/actions-gh-pages@v3
         with:
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: notyourimaginarycoder/notyourimaginarycoder.github.io
-          github_token: ${{ secrets.DEPLOYMENT }}
+          publish_branch: main
           publish_dir: ./dist
-          publish_branch: gh-pages
