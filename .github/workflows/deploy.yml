@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Vite site to GitHub Pages
 
 on:
   push:
@@ -13,18 +13,22 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v3
 
-      - name: Build the site
-        run: |
-          echo "Building site..."
-          # Example for static HTML site:
-          mkdir dist
-          cp -r * dist || true
-          rm -rf dist/.git dist/.github
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-      - name: Deploy to github.io repo
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build with Vite
+        run: npm run build
+
+      - name: Deploy to GitHub Pages repo
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.DEPLOY_TOKEN }}
           external_repository: notyourimaginarycoder/notyourimaginarycoder.github.io
           publish_branch: main
           publish_dir: ./dist
+
