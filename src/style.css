@@ -21,7 +21,8 @@ body {
   color: var(--text-dark);
   margin: 0;
   padding: 0;
-  transition: background-color var(--transition-speed), color var(--transition-speed);
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +72,9 @@ a:hover {
   text-decoration: underline;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   line-height: 1.3;
   margin-bottom: 0.5rem;
@@ -100,7 +103,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color var(--transition-speed), transform var(--transition-speed);
+  transition: background-color var(--transition-speed),
+    transform var(--transition-speed);
   display: inline-block;
 }
 
@@ -122,7 +126,8 @@ button:active {
   color: inherit;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
-  transition: box-shadow var(--transition-speed), background-color var(--transition-speed), color var(--transition-speed);
+  transition: box-shadow var(--transition-speed),
+    background-color var(--transition-speed), color var(--transition-speed);
   padding: 2rem;
   margin-bottom: 2rem;
 }
@@ -152,7 +157,8 @@ button:active {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed), background-color var(--transition-speed);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed), background-color var(--transition-speed);
 }
 
 body.theme-dark .project-card-horizontal {
@@ -195,7 +201,8 @@ body.theme-light .project-card-horizontal {
   padding: 4rem 2rem;
   border-radius: var(--border-radius);
   box-shadow: var(--card-shadow);
-  transition: background-color var(--transition-speed), color var(--transition-speed);
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
   color: inherit;
 }
 
@@ -233,7 +240,8 @@ textarea {
   padding: 0.8em 1.2em;
   border: 1px solid #ddd;
   border-radius: var(--border-radius);
-  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  transition: border-color var(--transition-speed),
+    box-shadow var(--transition-speed);
   width: 100%;
   margin-bottom: 1.2rem;
 }
@@ -244,13 +252,13 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: var(--primary-color);
   color: white;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: var(--secondary-color);
 }
 

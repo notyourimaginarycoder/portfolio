@@ -16,16 +16,17 @@ const projects: Project[] = [
   },
   {
     title: 'StackDew Valley',
-    description: 'A simple portfolio created with TypeScript and Vite',
+    description:
+      'A 2D farming simulator with a twist, created with JavaScript, Phaser, Firebase, Vite',
     imageUrl: 'https://via.placeholder.com/300x200',
     liveLink: 'https://notyourimaginarycoder.github.io/',
     repoLink: 'https://github.com/notyourimaginarycoder/stackdew-valley',
   },
 ]
 
-export function createProjectsSection(): HTMLElement {
+export const createProjectsSection = (): HTMLElement => {
   const section = document.createElement('section')
-  section.id = 'projects'
+  section.id = 'projects-section'
   section.innerHTML = `<h2>Projects</h2>`
 
   const container = document.createElement('div')

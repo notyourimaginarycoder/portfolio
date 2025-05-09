@@ -1,4 +1,4 @@
-export function createAboutMe(): HTMLElement {
+export const createAboutMe = (): HTMLElement => {
   const section = document.createElement('section')
   section.className = 'about-me-section'
 

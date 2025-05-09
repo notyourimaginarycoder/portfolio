@@ -1,4 +1,4 @@
-export function createContactMe(): HTMLElement {
+export const createContactMe = (): HTMLElement => {
   const section = document.createElement('section')
   section.className = 'contact-section'
 
