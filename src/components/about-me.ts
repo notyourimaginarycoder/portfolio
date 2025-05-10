@@ -1,4 +1,4 @@
-import { aboutMeHTML } from "../data/templates"
+import { aboutMeHTML } from '../data'
 
 export const createAboutMe = (): HTMLElement => {
   const section = document.createElement('section')
@@ -6,7 +6,7 @@ export const createAboutMe = (): HTMLElement => {
 
   const aboutMe = document.createElement('div')
   aboutMe.id = 'about-me'
-  aboutMe.innerHTML = aboutMeHTML
+  aboutMe.innerHTML = aboutMeHTML('imaginary friend', 'life is but a dream')
 
   section.appendChild(aboutMe)
 

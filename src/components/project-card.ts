@@ -1,5 +1,4 @@
-import { Project } from '../data/data'
-import { projectCardHTML } from '../data/templates'
+import { Project, projectCardHTML } from '../data'
 
 export const createProjectCard = (project: Project): HTMLElement => {
   const card = document.createElement('div')

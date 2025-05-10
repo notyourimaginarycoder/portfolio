@@ -1,7 +1,7 @@
-import { Project } from '../data/data'
+import { Project } from '../data'
 import { createProjectCard } from './project-card'
 
-export const createProjectsContainer = (projects: Project[]): HTMLElement => {
+export const createProjectsGroup = (projects: Project[]): HTMLElement => {
   const container = document.createElement('div')
   container.className = 'project-scroll-container'
 

@@ -1,5 +1,5 @@
-import { projects } from '../data/data'
-import { createProjectsContainer } from './project-container'
+import { projects } from '../data'
+import { createProjectsGroup } from './project-group'
 
 export const createProjects = (): HTMLElement => {
   const section = document.createElement('section')
@@ -8,7 +8,7 @@ export const createProjects = (): HTMLElement => {
   const heading = document.createElement('h2')
   heading.textContent = 'Projects'
 
-  const container = createProjectsContainer(projects)
+  const container = createProjectsGroup(projects)
 
   section.appendChild(heading)
   section.appendChild(container)
