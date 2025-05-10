@@ -1,13 +1,12 @@
+import { aboutMeHTML } from "../data/templates"
+
 export const createAboutMe = (): HTMLElement => {
   const section = document.createElement('section')
   section.className = 'about-me-section'
 
   const aboutMe = document.createElement('div')
   aboutMe.id = 'about-me'
-  aboutMe.innerHTML = `
-    <h1 id='main-name'>imaginary friend</h1>
-    <p><strong>life is but a dream</strong></p>
-    `
+  aboutMe.innerHTML = aboutMeHTML
 
   section.appendChild(aboutMe)
 
